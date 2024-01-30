@@ -1,6 +1,5 @@
 import { useState } from "react";
 import logo from "./logo.svg";
-import poweredBy from "./powered-by-vitawind-dark.png";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,15 +12,7 @@ function App() {
           className="animate-speed h-60 motion-safe:animate-spin"
           alt="logo"
         />
-        <style>
-          {
-            "\
-            .animate-speed{\
-              animation-duration:20s;\
-            }\
-          "
-          }
-        </style>
+
         <p className="bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-5xl font-black text-transparent selection:bg-transparent">
           Vite + React + Typescript + Tailwindcss v3
         </p>
@@ -57,7 +48,6 @@ function App() {
             Vite Docs
           </a>
         </p>
-        <img src={poweredBy} className="mx-auto my-8" alt="powered-by" />
       </header>
     </div>
   );
