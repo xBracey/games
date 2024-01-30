@@ -4,11 +4,14 @@
   "description": "",
   "scripts": {
     "start": "ts-node ./index.ts",
-    "dev": "watchexec -r 'npm start'"
+    "dev": "watchexec -r 'npm start'",
+    "migrate": "ts-node ./db/migrate.ts",
+    "migration": "drizzle-kit generate:sqlite"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cors": "^9.0.0",
     "better-sqlite3": "^9.3.0",
     "drizzle-orm": "^0.29.3",
     "fastify": "^4.26.0"

@@ -1,10 +1,17 @@
 import fastify from "fastify";
-import { db } from "./database";
+import { getUsers } from "./db";
+import cors from "@fastify/cors";
 
 const server = fastify();
 
+server.register(cors);
+
 server.get("/", async (request, reply) => {
   return "Hello there! 👋";
+});
+
+server.get("/users", async (request, reply) => {
+  return getUsers();
 });
 
 server.listen(
